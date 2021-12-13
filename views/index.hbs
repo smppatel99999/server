@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/plyr.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="icon" type="image/png" href="fav/favicon-32x32.png" sizes="32x32">
+	<meta name="author" content="Sahil Patel">
+	<title>SAAJ – Personal Music Streaming</title>
+
+</head>
+<body>
+	
+	<div class="sidebar">
+		<!-- sidebar logo -->
+		<div class="sidebar__logo">
+			<img src="img/saaj-side.png" alt="">
+		</div>
+		<!-- end sidebar logo -->
+
+		<!-- sidebar nav -->
+		<ul class="sidebar__nav">
+			<li class="sidebar__nav-item">
+				<a href="" class="sidebar__nav-link sidebar__nav-link--active"><span>Home</span></a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="" class="sidebar__nav-link"> <span>Artists</span></a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="" class="sidebar__nav-link"><span>Releases</span></a>
+			</li>
+
+			<li class="sidebar__nav-item">
+				<a href="" class="sidebar__nav-link"> <span>Events</span></a>
+			</li>
+
+			
+		</ul>
+		<!-- end sidebar nav -->
+	</div>
+	<!-- end sidebar -->
+
+	<!-- player -->
+	<div class="player">
+		<div class="player__cover">
+			<img src="img/saaj.png" alt="logo">
+		</div>
+
+		<div class="player__content">
+			<span class="player__track"><b class="player__title">Audio Player</b> – <span class="player__artist">Saaj</span></span>
+			
+			<audio src="" id="audio" controls></audio>
+		</div>
+	</div>
+
+	<button class="player__btn" type="button"><img src="img/musicIcon.png" width="20px" height="20px" />Player</button>
+	<!-- end player -->
+
+	<!-- main content -->
+	<main class="main">
+		<div class="container-fluid">
+			
+
+			<!-- releases -->
+			<section class="row row--grid">
+				
+				<div class="col-12">
+					<div class="main__title">
+						<h2>Recent Uploads</h2>
+					</div>
+				</div>
+				<!-- end title -->
+				{{#each songs}}
+				<div class="col-6 col-sm-4 col-lg-2">
+					<div class="album">
+						<div class="album__cover">
+							<img src="{{this.img}}" alt="">
+							<a data-link data-title="{{this.title}}" data-artist="{{this.artist}}" data-img="{{this.img}}" href="{{this.audio_url}}" class="single-item__cover">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.54,9,8.88,3.46a3.42,3.42,0,0,0-5.13,3V17.58A3.42,3.42,0,0,0,7.17,21a3.43,3.43,0,0,0,1.71-.46L18.54,15a3.42,3.42,0,0,0,0-5.92Zm-1,4.19L7.88,18.81a1.44,1.44,0,0,1-1.42,0,1.42,1.42,0,0,1-.71-1.23V6.42a1.42,1.42,0,0,1,.71-1.23A1.51,1.51,0,0,1,7.17,5a1.54,1.54,0,0,1,.71.19l9.66,5.58a1.42,1.42,0,0,1,0,2.46Z"/></svg>
+						</a>
+							
+						</div>
+						<div class="album__title">
+							<h3>{{this.title}}</h3>
+							<span>{{this.artist}}</span>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+
+				
+			</section>
+			
+			
+
+			
+
+
+
+
+
+			
+
+			
+			
+		</div>
+	</main>
+
+	
+
+
+
+
+	
+
+	<!-- JS -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/select2.min.js"></script>
+	
+	<script src="js/jquery.inputmask.min.js"></script>
+	<script src="js/plyr.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
